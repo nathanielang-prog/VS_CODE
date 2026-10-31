@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Favor!</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&family=Space+Grotesk:wght@300;400&display=swap">
+<style>
+:root{--card1:#e4dee8;--card2:#dad7e0;--ink:#20112e;--mute:#6b6575;--soft:#a29cac;--msg:#5a5565;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:linear-gradient(155deg,#471f5a 0%,#2f1547 38%,#1b0a2d 75%,#170826 100%) fixed #1a0a2d}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{overflow:hidden;background:none;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.b{position:fixed;bottom:-128px;left:var(--l);width:168px;height:168px;margin-left:-84px;border-radius:50%;background:linear-gradient(90deg,var(--c1),var(--c2));z-index:2}
+.sp{position:fixed;width:var(--s);height:var(--s);margin:calc(var(--s)/-2) 0 0 calc(var(--s)/-2);background:#fff;clip-path:polygon(50% 0,59% 41%,100% 50%,59% 59%,50% 100%,41% 59%,0 50%,41% 41%);animation:tw 3.2s ease-in-out infinite;z-index:4;pointer-events:none}
+.dt{position:fixed;width:3px;height:3px;border-radius:50%;background:#f9c74a;animation:tw 3s ease-in-out infinite;z-index:4;pointer-events:none}
+@keyframes tw{0%,100%{opacity:.3;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+.card{position:fixed;left:50%;top:50%;width:min(380px,90vw);aspect-ratio:380/275;transform:translate(-50%,-50%);border-radius:16px;background:linear-gradient(140deg,var(--card1),var(--card2));box-shadow:0 20px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:20px;text-align:center;z-index:5}
+.card p,.card h1{margin:0}
+.to{font-size:12px;line-height:16px;color:var(--mute);margin-bottom:3px!important}
+.t{font:italic 600 20px/26px Fraunces,Georgia,serif;color:var(--ink);margin-bottom:13px!important}
+#cw{cursor:pointer;user-select:none}
+#cake{display:block;margin:0 auto;overflow:visible;transition:transform .2s}
+#cw:hover #cake{transform:scale(1.04)}
+#h{font-size:10.5px;line-height:14px;letter-spacing:.02em;color:var(--soft);margin-top:10px!important}
+.m{font-size:15px;line-height:20px;color:var(--msg);margin-top:2px!important}
+.sg{font-size:11.5px;line-height:16px;font-style:italic;color:var(--mute);margin-top:18px!important}
+.stamp{position:absolute;top:13px;right:11px;width:84px;height:64px;overflow:visible;transform:rotate(1.5deg)}
+.fl{fill:#ffc53d;opacity:0;transform:scale(.3);transform-box:fill-box;transform-origin:50% 100%;transition:opacity .7s,transform .7s;filter:drop-shadow(0 0 2px #ffb02e)}
+.lit .fl{opacity:1;transform:none;animation:fk .22s ease-in-out infinite alternate .7s}
+@keyframes fk{to{transform:scale(.92,1.12) rotate(2deg)}}
+.s{fill:#8d849a;opacity:0;transform-box:fill-box;transform-origin:50% 50%}
+.out .s{animation:rise 1.5s ease-out both}
+@keyframes rise{0%{opacity:.6;transform:translateY(0) scale(.5)}100%{opacity:0;transform:translateY(-18px) scale(2.2)}}
+#snd{position:fixed;top:calc(20px + env(safe-area-inset-top,0px));right:18px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(36,14,52,.7);color:#d8cde3;display:grid;place-items:center;cursor:pointer;z-index:9;padding:0}
+.muted .w,body:not(.muted) .x{display:none}
+</style>
+</head>
+<body class="lit">
+<canvas id="c"></canvas>
+<i class="b" style="--l:19.6%;--c1:#bda6f6;--c2:#9b82ee"></i>
+<i class="b" style="--l:30.6%;--c1:#6bf8e0;--c2:#4fe0cb"></i>
+<i class="b" style="--l:35.7%;--c1:#fbfa7e;--c2:#f5f060"></i>
+<i class="b" style="--l:58.7%;--c1:#fb9a8d;--c2:#f4766a"></i>
+<i class="b" style="--l:88%;--c1:#f9d594;--c2:#f0b268"></i>
+
+<main class="card">
+  <svg class="stamp" viewBox="-32 0 84 64" aria-hidden="true">
+    <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5517c"/><stop offset=".6" stop-color="#f68c58"/><stop offset="1" stop-color="#fcd262"/></linearGradient></defs>
+    <rect width="52" height="64" rx="1.5" fill="#fdf9f3"/>
+    <rect x="1.4" y="1.4" width="49.2" height="61.2" fill="none" stroke="#dad7e0" stroke-width="3" stroke-dasharray="0 4.6" stroke-linecap="round"/>
+    <rect x="5.5" y="5.5" width="41" height="43" fill="url(#sg)"/>
+    <ellipse cx="21" cy="27" rx="4.4" ry="5" fill="#fbd54a"/><ellipse cx="32" cy="27" rx="4.4" ry="5" fill="#fbd54a"/>
+    <path d="M22 31l-1.5 8M31 31l1.5 8" stroke="#3b8fe6" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M25 33l-.5 6M28 33l.5 6" stroke="#ec2f8c" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="26" y="57" text-anchor="middle" font-size="5.2" letter-spacing=".5" font-family="ui-monospace,Menlo,monospace" fill="#3a3340">BIRTHDAY</text>
+    <g fill="none" stroke="#77727f" opacity=".8" transform="rotate(-8 -9 27)">
+      <circle cx="-9" cy="27" r="21.5" stroke-width="1.2"/>
+      <circle cx="-9" cy="27" r="16" stroke-width=".7"/>
+      <circle cx="-9" cy="27" r="18.8" stroke-width="2.6" stroke-dasharray="1.4 1.1" opacity=".7"/>
+      <path d="M-22 22.5h26M-21 33h24" stroke-width=".6"/>
+      <text x="-9" y="28.5" text-anchor="middle" font-size="7.5" font-style="italic" fill="#77727f" stroke="none" font-family="Space Grotesk,sans-serif">OCT 31</text>
+      <text x="-9" y="35.5" text-anchor="middle" font-size="4.5" fill="#77727f" stroke="none" font-family="Space Grotesk,sans-serif">2026</text>
+    </g>
+  </svg>
+  <p class="to">For Favor</p>
+  <h1 class="t">Happy Birthday, Favor!</h1>
+  <div id="cw" role="button" tabindex="0" aria-label="Blow out the candles">
+    <svg id="cake" viewBox="0 0 78 47" width="78" height="47">
+      <g fill="#f6f2f9"><rect x="23.8" y="4" width="2.4" height="13" rx="1.2"/><rect x="37.8" y="4" width="2.4" height="13" rx="1.2"/><rect x="51.8" y="4" width="2.4" height="13" rx="1.2"/></g>
+      <rect x="13" y="15" width="52" height="18" rx="5" fill="#fcd35f"/>
+      <rect y="27" width="78" height="20" rx="6" fill="#e22d6a"/>
+      <path class="fl" d="M25 -2.8C27.3 0 27.1 3.2 25 4.2C22.9 3.2 22.7 0 25 -2.8Z"/>
+      <path class="fl" d="M39 -2.8C41.3 0 41.1 3.2 39 4.2C36.9 3.2 36.7 0 39 -2.8Z"/>
+      <path class="fl" d="M53 -2.8C55.3 0 55.1 3.2 53 4.2C50.9 3.2 50.7 0 53 -2.8Z"/>
+      <circle class="s" cx="25" cy="0" r="1.8"/><circle class="s" cx="39" cy="0" r="1.8" style="animation-delay:.08s"/><circle class="s" cx="53" cy="0" r="1.8" style="animation-delay:.16s"/>
+    </svg>
+    <p id="h">tap to blow out the candles</p>
+  </div>
+  <p class="m">Happy birthday</p>
+  <p class="sg">— Nathaniel</p>
+</main>
+
+<button id="snd" aria-label="Toggle sound">
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="x" d="m16 9 6 6m0-6-6 6"/></svg>
+</button>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),B=document.body,R=Math.random;
+
+/* twinkling sparkles + dots */
+const S=[[26.9,37.1,11],[69.2,53.9,14],[50.3,73.8,9],[69.6,86.1,8]],
+D=[[62.7,12.2],[79.9,31.7],[87.4,48.2],[93.5,54.6],[23.9,80.1],[25.1,87.3],[22.6,90.3],[26.4,91],[48.1,68.8],[58.7,82.6],[91.1,83.1],[82.6,95.2],[78.8,88.8]];
+S.forEach(([x,y,s],i)=>B.insertAdjacentHTML('beforeend',`<i class="sp" style="left:${x}%;top:${y}%;--s:${s}px;animation-delay:${-i*.9}s"></i>`));
+D.forEach(([x,y],i)=>B.insertAdjacentHTML('beforeend',`<b class="dt" style="left:${x}%;top:${y}%;animation-delay:${-(i*.7%3)}s"></b>`));
+
+/* confetti */
+const cv=$('#c'),g=cv.getContext('2d'),C=['#ff8f3f','#ff4f8b','#4de3d6','#a98af5','#ffc93d'];
+let W,H,r=Math.min(devicePixelRatio||1,2),P=[];
+const mk=y=>({x:R()*W,y,w:5+R()*3,h:9+R()*5,c:C[R()*5|0],vy:70+R()*50,vx:0,a:R()*6.3,vr:(R()-.5)*3,ph:R()*6.3,sw:8+R()*22});
+function rs(){W=innerWidth;H=innerHeight;cv.width=W*r;cv.height=H*r;g.setTransform(r,0,0,r,0,0)}
+addEventListener('resize',rs);rs();
+for(let i=0,n=Math.round(W*H/40000)+10;i<n;i++)P.push(mk(R()*H));
+let T=performance.now();
+(function f(t){
+  const dt=Math.min((t-T)/1e3,.05);T=t;g.clearRect(0,0,W,H);
+  for(let i=P.length-1;i>=0;i--){
+    const p=P[i];
+    if(p.k){p.vy=Math.min(p.vy+520*dt,p.t);p.vx*=1-1.8*dt}
+    p.ph+=dt*2;p.a+=p.vr*dt;p.y+=p.vy*dt;p.x+=(p.vx+Math.sin(p.ph)*p.sw)*dt;
+    if(p.y>H+20){if(p.k)P.splice(i,1);else Object.assign(p,mk(-20))}
+    g.save();g.translate(p.x,p.y);g.rotate(p.a);g.scale(1,Math.max(.25,Math.abs(Math.cos(p.ph))));
+    g.fillStyle=p.c;g.fillRect(-p.w/2,-p.h/2,p.w,p.h);g.restore();
+  }
+  requestAnimationFrame(f);
+})(T);
+function burst(){
+  const q=$('.card').getBoundingClientRect();
+  for(let i=0;i<80;i++){
+    const a=-Math.PI/2+(R()-.5)*2.4,s=250+R()*380,p=mk(q.top+10);
+    p.x=q.left+q.width/2+(R()-.5)*q.width*.6;p.vx=Math.cos(a)*s;p.vy=Math.sin(a)*s;p.k=1;p.t=60+R()*60;p.sw=8+R()*14;P.push(p);
+  }
+}
+
+/* music box: same tune and timing as the original */
+const N={G4:392,A4:440,B4:494,C5:523,D5:587,E5:659,F5s:740,G5:784},
+M=[['G4',0],['G4',.14],['A4',.28],['G4',.56],['C5',.84],['B4',1.12],
+['G4',1.68],['G4',1.82],['A4',1.96],['G4',2.24],['D5',2.52],['C5',2.8],
+['G4',3.36],['G4',3.5],['G5',3.64],['E5',3.92],['C5',4.2],['B4',4.48],['A4',4.76],
+['F5s',5.32],['F5s',5.46],['E5',5.6],['C5',5.88],['D5',6.16],['C5',6.44]];
+let on=1,ac=0;
+/* blow sound, then the tune plays through once (no loop) */
+function sfx(){
+  if(!on)return;
+  ac&&ac.close();
+  ac=new(window.AudioContext||window.webkitAudioContext)();ac.resume();
+  const l=ac.sampleRate*.22|0,b=ac.createBuffer(1,l,ac.sampleRate),q=b.getChannelData(0);
+  for(let i=0;i<l;i++)q[i]=(R()*2-1)*(1-i/l)**2;
+  const s=ac.createBufferSource(),f=ac.createBiquadFilter(),gn=ac.createGain(),t0=ac.currentTime+.05;
+  s.buffer=b;f.type='bandpass';f.frequency.value=380;f.Q.value=.6;gn.gain.value=.35;
+  s.connect(f).connect(gn).connect(ac.destination);s.start(t0);
+  M.forEach(([n,o])=>[[1,.2,.9],[2.76,.05,.18],[5.4,.02,.1]].forEach(([k,v,d])=>{
+    const os=ac.createOscillator(),g2=ac.createGain(),t=t0+.25+o;
+    os.frequency.value=N[n]*k;
+    g2.gain.setValueAtTime(0,t);g2.gain.linearRampToValueAtTime(v,t+.004);g2.gain.exponentialRampToValueAtTime(.0001,t+d);
+    os.connect(g2).connect(ac.destination);os.start(t);os.stop(t+d+.05);
+  }));
+}
+$('#snd').onclick=()=>{
+  on=!on;B.classList.toggle('muted',!on);
+  if(!on&&ac){ac.close();ac=0}
+};
+
+/* candles */
+const h=$('#h');
+function tap(){
+  if(B.classList.contains('lit')){B.classList.remove('lit');B.classList.add('out');h.textContent='make a wish';burst();sfx()}
+  else{B.classList.remove('out');B.classList.add('lit');h.textContent='tap to blow out the candles'}
+}
+$('#cw').onclick=tap;
+$('#cw').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tap()}};
+})();
+</script>
+</body>
+</html>
